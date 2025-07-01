@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FocusMode">
+
+    <!-- Countdown Timer -->
+    <TextView
+        android:id="@+id/countdown_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:25:00"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="#5D4037"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" />
+
+    <!-- Start / Pause / Reset Buttons -->
+    <LinearLayout
+        android:id="@+id/timer_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/countdown_timer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp">
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:layout_marginEnd="12dp"
+            android:background="#002B7F"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/pause_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pause"
+            android:layout_marginEnd="12dp"
+            android:background="#002B7F"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:background="#002B7F"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Lo-Fi Music Controls Section -->
+    <LinearLayout
+        android:id="@+id/music_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="#EEEEEE"
+        android:padding="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/now_playing_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Now Playing: Lo-Fi Beats"
+            android:textSize="18sp"
+            android:textColor="#4E342E"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/music_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="12dp">
+
+            <Button
+                android:id="@+id/start_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Music"
+                android:layout_marginEnd="8dp"
+                android:background="#4CAF50"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/pause_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pause Music"
+                android:layout_marginEnd="8dp"
+                android:background="#FFA000"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/stop_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stop Music"
+                android:background="#D32F2F"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

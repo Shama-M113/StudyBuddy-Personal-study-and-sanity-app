@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvMotivation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✨ Unlock Your Potential, One Problem at a Time! ✨"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#002B7F"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/btnLeetCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LeetCode"
+            android:background="#E3F2FD"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btnHackerRank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HackerRank"
+            android:background="#E3F2FD"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnGeeksForGeeks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GeeksForGeeks"
+            android:background="#E3F2FD"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnCodeforces"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Codeforces"
+            android:background="#E3F2FD"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnInterviewBit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="InterviewBit"
+            android:background="#E3F2FD"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnW3Schools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="W3Schools"
+            android:background="#E3F2FD"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnStackOverflow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="StackOverflow"
+            android:background="#E3F2FD"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>
