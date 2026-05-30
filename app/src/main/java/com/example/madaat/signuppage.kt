@@ -7,15 +7,17 @@ import android.widget.*
 import android.content.Intent
 import android.util.Log
 import android.util.Patterns
-
+import com.google.android.material.textfield.TextInputEditText
 
 class signuppage : AppCompatActivity() {
     private lateinit var dbHelper: DatabaseHelper
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signuppage)
         dbHelper = DatabaseHelper(this)
+
         val loginLink = findViewById<TextView>(R.id.loginLink)
         loginLink.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
@@ -23,10 +25,10 @@ class signuppage : AppCompatActivity() {
         }
 
         val btn = findViewById<Button>(R.id.button2)
-        val usernameField = findViewById<EditText>(R.id.username)
-        val emailField = findViewById<EditText>(R.id.singup_email)
-        val passwordField = findViewById<EditText>(R.id.singup_password)
-        val confirmPasswordField = findViewById<EditText>(R.id.singup_confirm_password)
+        val usernameField = findViewById<TextInputEditText>(R.id.username)
+        val emailField = findViewById<TextInputEditText>(R.id.singup_email)
+        val passwordField = findViewById<TextInputEditText>(R.id.singup_password)
+        val confirmPasswordField = findViewById<TextInputEditText>(R.id.singup_confirm_password)
 
         btn.setOnClickListener {
             val username = usernameField.text.toString().trim()
@@ -45,11 +47,11 @@ class signuppage : AppCompatActivity() {
                 }
             }
         }
+
         val allUsers = dbHelper.getAllUsers()
         for (user in allUsers) {
             Log.d("DB_USER", user)
         }
-
     }
 
     private fun validateSignUpForm(
@@ -84,5 +86,4 @@ class signuppage : AppCompatActivity() {
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
-
 }
